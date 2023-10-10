@@ -6,7 +6,7 @@ from ..plugins_config import (
 #
 # extras.tags
 # 
-async def tag():
+def tag():
     proxbox_tag_name = 'Proxbox'
     proxbox_tag_slug = 'proxbox'
 
@@ -40,7 +40,7 @@ async def tag():
 # dcim.device_roles
 #
 # OBS: this function is here and not in ./dcim.py since it is used by both NODE and VIRTUAL MACHINE.
-async def role(**kwargs):
+def role(**kwargs):
     # If role_id equals to 0, consider it is not configured by user and must be created by Proxbox
     role_id = kwargs.get("role_id", 0)
 
